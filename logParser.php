@@ -21,8 +21,6 @@ class logParse {
     $currentLogLine = 1;
 
     foreach($logFile as $singleLog) {
-      // echo "<br>Line: $currentLogLine / $this->totalLogLines<br>";
-
       // Check the number of lines in log file
       if ($this->totalLogLines - $currentLogLine <= $this->linesToDisplay && $singleLog != "") {
         if (preg_match($dateInLogPattern, $singleLog)) {
